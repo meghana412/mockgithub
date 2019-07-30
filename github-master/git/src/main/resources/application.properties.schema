@@ -1,0 +1,29 @@
+# Spring boot application
+spring.application.name = rpc for git operation
+server.port = 9090
+management.port = 9091
+
+# Service version
+git.service.version = 1.0.0
+
+# Base packages to scan Dubbo Components (e.g @Service , @Reference)
+dubbo.scan.basePackages  = com.pwxcoo.git.service
+
+# Dubbo Config properties
+## ApplicationConfig Bean
+dubbo.application.id = github-storage
+dubbo.application.name = github-storage
+
+## ProtocolConfig Bean
+dubbo.protocol.id = zookeeper
+dubbo.protocol.name = dubbo
+dubbo.protocol.port = 20081
+dubbo.protocol.host =
+
+## RegistryConfig Bean
+dubbo.registry.id = my-registry
+dubbo.registry.protocol = zookeeper
+dubbo.registry.address = 127.0.0.1:2181
+
+## GitServiceConfig
+gitservice.directory = E:/hellowxc/test
